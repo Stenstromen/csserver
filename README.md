@@ -11,3 +11,5 @@ docker run -d --rm \
 -e MAXPLAYERS="16" \
  csserver:latest
 ```
+
+# Random Notes
