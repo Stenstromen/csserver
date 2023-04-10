@@ -4,5 +4,10 @@ Based on https://dev.to/flatmango/counter-strike-16-dedicated-server-part-1-basi
 
 ## Example docker run
 ```
-docker run -d --rm -p 27015:27015/tcp -p 27015:27015/udp -v $PWD/csserver.cfg:/home/csserver/lgsm/config-lgsm/csserver/csserver.cfg csserver:latest
+docker run -d --rm \
+-p 27015:27015/tcp \
+-p 27015:27015/udp \
+-e MAP="cs_assault" \
+-e MAXPLAYERS="16" \
+ csserver:latest
 ```
