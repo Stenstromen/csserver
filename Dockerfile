@@ -42,10 +42,15 @@ EXPOSE 27015/udp
 EXPOSE 27015/tcp
 WORKDIR /home/csserver/serverfiles
 CMD ./hlds_run -game cstrike \
+-nointro \
+-nojoy \
+-noipx \
+-heapsize 64000 \
 -strictportbind \
 +ip 0.0.0.0 \
 -port 27015 \
 +clientport 27005 \
 +map $MAP \
 +servercfgfile csserver.cfg \
--maxplayers $MAXPLAYERS
+-maxplayers $MAXPLAYERS \
+2> /dev/null
